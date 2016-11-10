@@ -19,7 +19,7 @@ public class DatabaseMethods extends Database{
 			String tableScript =
 					"CREATE TABLE IF NOT EXISTS course ( " +
 
-							"courseId	INTEGER PRIMARY KEY, " +
+							"courseId	INTEGER PRIMARY KEY AUTO_INCREMENT, " +
 							"name 		VARCHAR(15) NOT NULL UNIQUE, " +
 							"author 	VARCHAR(20) NOT NULL, " +
 							"created 	TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL " +
@@ -28,7 +28,7 @@ public class DatabaseMethods extends Database{
 
 					"CREATE TABLE IF NOT EXISTS time ( " +
 
-							"timeId 	INTEGER PRIMARY KEY, " +
+							"timeId 	INTEGER PRIMARY KEY AUTO_INCREMENT, " +
 							"courseId 	INTEGER NOT NULL, " +
 							"player	 	VARCHAR(20) NOT NULL, " +
 							"time		DECIMAL(13,0) NOT NULL, " +
@@ -90,6 +90,8 @@ public class DatabaseMethods extends Database{
 			ps.setString(1, courseName);
 
 			ResultSet rs = ps.executeQuery();
+			if(!Parkour.getDatabaseObj().getType().equals("SQLite"))
+				rs.next();
 			courseId =  rs.getInt("courseId");
 
 		} catch (SQLException e) {
@@ -217,6 +219,9 @@ public class DatabaseMethods extends Database{
 			ps.setInt(1, courseId);
 			ps.setInt(2, courseId);
 			ResultSet rs = ps.getResultSet();
+
+			if(!Parkour.getDatabaseObj().getType().equals("SQLite"))
+				rs.next();
 
 			int total = rs.getInt("votes");
 			int likes = rs.getInt("likes");
