@@ -28,7 +28,7 @@ public final class Static {
 	private static boolean devBuild = true;
 	private static ParkourBlocks pblocks;
 
-	private final static String ParkourString = Utils.colour("&0[&bParkour&0] &f");
+	private static String ParkourString;
 	private static Double version;
 
 	public final static String PATH = Parkour.getPlugin().getDataFolder() + File.separator + "playing.bin";
@@ -36,6 +36,7 @@ public final class Static {
 	public final static void initiate() {
 		version = Double.parseDouble(Parkour.getPlugin().getDescription().getVersion());
 		courseList = Parkour.getParkourConfig().getAllCourses();
+		ParkourString = Utils.colour(Parkour.getParkourConfig().getStringData().getString("Parkour.Prefix"));
 		pblocks = Utils.populateParkourBlocks();
 	}
 

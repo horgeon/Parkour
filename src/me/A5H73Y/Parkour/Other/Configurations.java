@@ -239,6 +239,8 @@ public class Configurations {
 			if (stringData.getString("Parkour.PrefixColour").length() != 1)
 				stringData.set("Parkour.PrefixColour", "b");
 
+			stringData.addDefault("Parkour.Prefix", "&0[&bParkour&0] &f");
+
 			stringData.addDefault("Event.Join", "This server uses &bParkour &3%VERSION%");
 			stringData.addDefault("Event.Checkpoint", "Checkpoint set to: ");
 			stringData.addDefault("Event.AllCheckpoints", "All checkpoints achieved!");
