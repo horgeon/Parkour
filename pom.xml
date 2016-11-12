@@ -23,7 +23,7 @@
 		</repository>
 		<repository>
 			<id>horgeon-repo</id>
-			<url>http://repo.horgeon.fr/artifactory/maven-release/</url>
+			<url>https://repo.horgeon.fr/repository/maven-releases/</url>
 		</repository>
 	</repositories>
 	<dependencies>
