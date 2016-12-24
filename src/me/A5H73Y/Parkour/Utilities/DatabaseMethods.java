@@ -315,6 +315,8 @@ public class DatabaseMethods extends Database {
 	}
 
 	public static List<TimeObject> getTopCourseResults(String courseName, int limit){
+		limit = limit < 1 ? 1 : limit > 20 ? 20 : limit;
+		
 		List<TimeObject> times = new ArrayList<TimeObject>();
 		try {
 			int courseId = getCourseId(courseName);
@@ -343,6 +345,8 @@ public class DatabaseMethods extends Database {
 	}
 
 	public static List<TimeObject> getTopPlayerCourseResults(String playerName, String courseName, int limit){
+		limit = limit < 1 ? 1 : limit > 20 ? 20 : limit;
+		
 		List<TimeObject> times = new ArrayList<TimeObject>();
 		try {
 			int courseId = getCourseId(courseName);
