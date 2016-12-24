@@ -61,11 +61,11 @@
 			<version>1.6</version>
 			<scope>provided</scope>
 		</dependency>
-		<!--TitleBarAction API-->
+		<!--Bountiful API-->
 		<dependency>
-			<groupId>de.bg.derh4nnes</groupId>
-			<artifactId>TitleActionBarAPI</artifactId>
-			<version>2.2.4</version>
+			<groupId>com.connorlinfoot</groupId>
+			<artifactId>BountifulAPI</artifactId>
+			<version>1.6.1</version>
 			<scope>provided</scope>
 		</dependency>
 	</dependencies>
