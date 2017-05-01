@@ -1,0 +1,172 @@
+package me.A5H73Y.Parkour.Other;
+
+import java.io.Serializable;
+
+import org.bukkit.Material;
+
+/**
+ * This work is licensed under a Creative Commons 
+ * Attribution-NonCommercial-ShareAlike 4.0 International License. 
+ * https://creativecommons.org/licenses/by-nc-sa/4.0/
+ *
+ * @author A5H73Y
+ */
+public class ParkourBlocks implements Serializable{
+
+	private static final long serialVersionUID = 1L;
+
+	private Material death, finish, climb, launch, speed, repulse, norun, nopotion, bounce;
+
+	private double str_launch, str_climb, str_repulse, str_doublejump;
+
+	private int str_speed, dur_speed;
+
+
+	/**
+	 * ParkourBlocks
+	 * Each ParkourBlocks set has a unique name associated to it, for lookup.
+	 * Each course can have a ParkourBlocks set to use; meaning there could be a different material for each type per course.
+	 * The NoRun, NoPotion and Bounce all use the default blocks specified.
+	 * 
+	 * @param finish
+	 * @param climb
+	 * @param launch
+	 * @param speed
+	 * @param repulse
+	 * @param norun
+	 * @param nopotion
+	 * @param bounce
+	 */
+	public ParkourBlocks(Material death, Material finish, Material climb, Material launch, Material speed, Material repulse, Material norun, Material nopotion, Material bounce){
+		this.death = death;
+		this.finish = finish;
+		this.climb = climb;
+		this.launch = launch;
+		this.speed = speed;
+		this.repulse = repulse;
+		this.norun = norun;
+		this.nopotion = nopotion;
+		this.bounce = bounce;
+	}
+
+	public Material getDeath() {
+		return death;
+	}
+
+	public void setDeath(Material death) {
+		this.death = death;
+	}
+
+	public Material getFinish() {
+		return finish;
+	}
+
+	public void setFinish(Material finish) {
+		this.finish = finish;
+	}
+
+	public Material getClimb() {
+		return climb;
+	}
+
+	public void setClimb(Material climb) {
+		this.climb = climb;
+	}
+
+	public Material getLaunch() {
+		return launch;
+	}
+
+	public void setLaunch(Material launch) {
+		this.launch = launch;
+	}
+
+	public Material getSpeed() {
+		return speed;
+	}
+
+	public void setSpeed(Material speed) {
+		this.speed = speed;
+	}
+
+	public Material getRepulse() {
+		return repulse;
+	}
+
+	public void setRepulse(Material repulse) {
+		this.repulse = repulse;
+	}
+
+	public Material getNorun() {
+		return norun;
+	}
+
+	public void setNorun(Material norun) {
+		this.norun = norun;
+	}
+
+	public Material getNopotion() {
+		return nopotion;
+	}
+
+	public void setNopotion(Material nopotion) {
+		this.nopotion = nopotion;
+	}
+
+	public Material getBounce() {
+		return bounce;
+	}
+
+	public void setBounce(Material bounce) {
+		this.bounce = bounce;
+	}
+
+	public double getStr_launch() {
+		return str_launch;
+	}
+
+	public void setStr_launch(double str_launch) {
+		this.str_launch = str_launch;
+	}
+
+	public double getStr_climb() {
+		return str_climb;
+	}
+
+	public void setStr_climb(double str_climb) {
+		this.str_climb = str_climb;
+	}
+
+	public int getStr_speed() {
+		return str_speed;
+	}
+
+	public void setStr_speed(int str_speed) {
+		this.str_speed = str_speed;
+	}
+
+	public double getStr_repulse() {
+		return str_repulse;
+	}
+
+	public void setStr_repulse(double str_repulse) {
+		this.str_repulse = str_repulse;
+	}
+
+	public double getStr_doublejump() {
+		return str_doublejump;
+	}
+
+	public void setStr_doublejump(double str_doublejump) {
+		this.str_doublejump = str_doublejump;
+	}
+
+	public int getDur_speed() {
+		return dur_speed;
+	}
+
+	public void setDur_speed(int dur_speed) {
+		this.dur_speed = dur_speed;
+	}
+
+}
